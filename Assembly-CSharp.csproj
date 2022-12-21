@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="Assets\SpwanCar.cs" />
     <Compile Include="Assets\CarMovement.cs" />
+    <Compile Include="Assets\MainCharacterMovement.cs" />
+    <Compile Include="Assets\CameraMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
