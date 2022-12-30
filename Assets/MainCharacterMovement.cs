@@ -7,6 +7,7 @@ public class MainCharacterMovement : MonoBehaviour
     public Vector3 moveDirection = Vector3.zero;
     public float rotateSpeed ;
     public float moveSpeed;
+    public GameObject slowdownHitbox;
     Rigidbody rb;
     // Start is called before the first frame update
     void Start()
@@ -24,5 +25,13 @@ public class MainCharacterMovement : MonoBehaviour
         moveDirection *= Time.deltaTime * moveSpeed;
         transform.Translate(moveDirection,0,moveVertical);
 
+        if (Input.GetMouseButton(0))
+        {
+            slowdownHitbox.SetActive(true);
+        }
+        else
+        {
+            slowdownHitbox.SetActive(false);
+        }
     }
 }

@@ -60,6 +60,8 @@
     <Compile Include="Assets\CarMovement.cs" />
     <Compile Include="Assets\MainCharacterMovement.cs" />
     <Compile Include="Assets\CameraMovement.cs" />
+    <Compile Include="Assets\Detect.cs" />
+    <Compile Include="Assets\FollowingCarSlowDown.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
