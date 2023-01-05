@@ -27,12 +27,7 @@ public class Detect : MonoBehaviour
             fill.fillAmount -= 1f * Time.deltaTime;
         }
 
-        if (fill.fillAmount == 1)
-        {
-            canvas.gameObject.SetActive(false);
-            cat.SetActive(false);
-            pickupcat.SetActive(true);
-        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -41,12 +36,38 @@ public class Detect : MonoBehaviour
         {
             canvas.gameObject.SetActive(true);
         }
+
+        if (other.tag == "Complete")
+        {
+            canvas.gameObject.SetActive(true);
+        }
+         
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "cat")
         {
+            canvas.gameObject.SetActive(false);
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "cat")
+        {
+            if (fill.fillAmount == 1)
+            {
+                cat.SetActive(false);
+                pickupcat.SetActive(true);
+                fill.fillAmount = 0;
+                canvas.gameObject.SetActive(false);
+            }
+        }
+
+        if (other.tag == "Complete" && fill.fillAmount == 1)
+        {
+            pickupcat.SetActive(false);
             canvas.gameObject.SetActive(false);
         }
     }
