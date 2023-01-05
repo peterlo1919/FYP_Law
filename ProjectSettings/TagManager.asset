@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Block
+  - cat
+  - SlowDown
+  - car
+  - car_tail
+  - board
+  - Complete
   layers:
   - Default
   - TransparentFX

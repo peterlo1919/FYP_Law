@@ -60,13 +60,16 @@
     <Compile Include="Assets\Scripts\Detect.cs" />
     <Compile Include="Assets\Menu\ClosePanel.cs" />
     <Compile Include="Assets\Scripts\CarMovement.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Menu\PlaySoundOnStart.cs" />
     <Compile Include="Assets\Mini Toon Office\Readme\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\FollowingCarSlowDown.cs" />
     <Compile Include="Assets\Scripts\OfficeDetec.cs" />
+    <Compile Include="Assets\Menu\SoundManager.cs" />
     <Compile Include="Assets\Menu\Menu.cs" />
+    <Compile Include="Assets\Menu\VolumeSlider.cs" />
     <Compile Include="Assets\Scripts\MainCharacterMovement.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
