@@ -46,6 +46,9 @@
      <Compile Include="Assets\Menu\Menu.cs" />
      <Compile Include="Assets\Scripts\MainCharacterMovement.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
+     <Compile Include="Assets\Menu\SoundManager.cs" />
+     <Compile Include="Assets\Menu\PlaySoundOnStart.cs" />
+     <Compile Include="Assets\Menu\VolumeSlider.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity 2021.3.6f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
