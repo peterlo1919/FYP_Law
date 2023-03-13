@@ -22,7 +22,7 @@ public class CatMove : MonoBehaviour
     {
         float distance = Vector3.Distance(transform.position, Player.transform.position);
 
-        Debug.Log("Distance: " + distance);
+        //Debug.Log("Distance: " + distance);
 
         if(distance < EnemyDistanceRun){
             Vector3 dirToPlayer = transform.position - Player.transform.position;
