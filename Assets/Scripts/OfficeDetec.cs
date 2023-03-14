@@ -11,6 +11,7 @@ public class OfficeDetec : MonoBehaviour
     public Image fill;
     public GameObject borad;
     public GameObject pickupcat;
+    public GameObject info;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,5 +52,19 @@ public class OfficeDetec : MonoBehaviour
         {
             canvas.gameObject.SetActive(false);
         }
+    }
+
+    public void Info()
+    {
+        mission.gameObject.SetActive(false);
+        info.gameObject.SetActive(true);
+        
+    }
+    
+    public void BackInfo()
+    {
+        mission.gameObject.SetActive(true);
+        info.gameObject.SetActive(false);
+
     }
 }

@@ -11,9 +11,12 @@ public class CatMove : MonoBehaviour
 
     public float EnemyDistanceRun = 4.0f;
 
+    public Animator cat_animator;
+
     // Start is called before the first frame update
     void Start()
     {
+        cat_animator.SetBool("IsRun", false);
         _agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
 
@@ -25,11 +28,19 @@ public class CatMove : MonoBehaviour
         //Debug.Log("Distance: " + distance);
 
         if(distance < EnemyDistanceRun){
+            
+            cat_animator.SetBool("IsRun", true);
+            
             Vector3 dirToPlayer = transform.position - Player.transform.position;
 
             Vector3 newPos = transform.position + dirToPlayer;
 
             _agent.SetDestination(newPos);
+
+        }
+        else
+        {
+            cat_animator.SetBool("IsRun", false);
         }
     }
 }

@@ -13,6 +13,7 @@ public class MainCharacterMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         rb = GetComponent<Rigidbody>();
     }
 
@@ -25,15 +26,6 @@ public class MainCharacterMovement : MonoBehaviour
         moveVertical *= Time.deltaTime * moveSpeed;
         moveDirection *= Time.deltaTime * moveSpeed;
         transform.Translate(moveDirection,0,moveVertical);
-
-        if (Input.GetMouseButton(0))
-        {
-            slowdownHitbox.SetActive(true);
-        }
-        else
-        {
-            slowdownHitbox.SetActive(false);
-        }
     }
 
     private void OnTriggerEnter(Collider other)

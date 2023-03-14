@@ -9,6 +9,8 @@ public class Detect : MonoBehaviour
     public Image fill;
     public GameObject cat;
     public GameObject pickupcat;
+    public GameObject success;
+    public bool level_success = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,6 +71,8 @@ public class Detect : MonoBehaviour
         {
             pickupcat.SetActive(false);
             canvas.gameObject.SetActive(false);
+            success.gameObject.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 }
