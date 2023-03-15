@@ -441,6 +441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  rb: {fileID: 1080822026}
 --- !u!54 &1080822026
 Rigidbody:
   m_ObjectHideFlags: 0
