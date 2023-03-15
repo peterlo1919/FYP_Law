@@ -17,13 +17,13 @@ public class CarSpeed : MonoBehaviour
     {
         transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
 
-        if (speed >= 80 && speed <= 99)
+        if (speed <= 2)
         {
-            speed = speed + (5 * Time.deltaTime);
+            speed = speed + (1 * Time.deltaTime);
         }
-        else if (speed == 100)
+        else if (speed == 2)
         {
-            speed = 100;
+            speed = 2;
         }
     }    
 
