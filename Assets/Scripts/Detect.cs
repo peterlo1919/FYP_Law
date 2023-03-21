@@ -10,11 +10,11 @@ public class Detect : MonoBehaviour
     public GameObject cat;
     public GameObject pickupcat;
     public GameObject success;
-    public bool level_success = false;
+    public GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -72,6 +72,7 @@ public class Detect : MonoBehaviour
             pickupcat.SetActive(false);
             canvas.gameObject.SetActive(false);
             success.gameObject.SetActive(true);
+            gameManager.level1_Clear = true;
             Time.timeScale = 0;
         }
     }
