@@ -35,7 +35,7 @@ public class Playmove : MonoBehaviour
  
         if (cursorLock)
         {
-            Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = true;
         }
     }

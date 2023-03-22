@@ -16,6 +16,7 @@ public class Game : MonoBehaviour
 
     public GameObject EndScreen;
     public GameObject WinScreen;
+    public GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -63,6 +64,7 @@ public class Game : MonoBehaviour
         if(score == totalCat)
         {
             Time.timeScale = 0f;
+            gameManager.level2_Clear = true;
             WinScreen.SetActive(true);
         }
     }

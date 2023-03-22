@@ -32,6 +32,11 @@ public class OfficeDetec : MonoBehaviour
             Level1.SetActive(false);
             Level2.SetActive(true);
         }
+        if (gameManager.level2_Clear == true)
+        {
+            Level1.SetActive(false);
+            Level2.SetActive(false);
+        }
         Level1_UI();
         Level2_UI();
        
