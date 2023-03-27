@@ -27,7 +27,7 @@ public class GroundTile : MonoBehaviour
         int objectSpwaner = Random.RandomRange(2, 5);
         Transform spwanPoint = transform.GetChild(objectSpwaner).transform;
 
-        Instantiate(objectPrefab,spwanPoint.position,Quaternion.identity,transform);
+        Instantiate(objectPrefab,spwanPoint.position,objectPrefab.transform.rotation, objectPrefab.transform.parent);
     }
     // Update is called once per frame
     void Update()
