@@ -9,7 +9,7 @@ public class CatMove : MonoBehaviour
 
     public GameObject Player;
 
-    public float EnemyDistanceRun = 4.0f;
+    public float EnemyDistanceRun = 5.0f;
 
     public Animator cat_animator;
 
