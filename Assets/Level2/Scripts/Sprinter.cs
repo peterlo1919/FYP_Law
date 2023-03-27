@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sprinter : MonoBehaviour
 {
-    float stamina =1, maxStamina = 1;
+   public float stamina =1, maxStamina = 1;
     float walkSpeed, runSpeed;
     Playmove cm;
     bool isRunnig;
