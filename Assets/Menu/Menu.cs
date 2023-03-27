@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public GameObject creditPanel, settingPanel;
+    public GameObject creditPanel, settingPanel, storyPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -37,5 +37,10 @@ public class Menu : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+
+    public void ShowStory()
+    {
+        storyPanel.SetActive(true);
     }
 }
