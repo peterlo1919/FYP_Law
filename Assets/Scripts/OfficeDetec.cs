@@ -20,11 +20,12 @@ public class OfficeDetec : MonoBehaviour
     public GameObject Level3;
     public GameObject Level3_Mission;
     public GameObject Level3_info;
-
+    [SerializeField] MainCharacterMovement mainCharacterMovement;
+    [SerializeField] CameraMovement cameraMovement;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-       
+        cameraMovement = GetComponentInParent<CameraMovement>();
     }
 
     // Update is called once per frame
@@ -123,6 +124,9 @@ public class OfficeDetec : MonoBehaviour
             canvas.gameObject.SetActive(false);
             mission.gameObject.SetActive(true);
             mission.gameObject.transform.DOScale(1f, 0.1f).SetEase(Ease.OutBounce);
+            mainCharacterMovement.rotateSpeed = 0;
+            cameraMovement.rotateSpeed = 0;
+            
         }
     } 
     void Level2_UI()
