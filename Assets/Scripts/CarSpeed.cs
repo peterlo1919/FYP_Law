@@ -9,6 +9,7 @@ public class CarSpeed : MonoBehaviour
     float horizontalInput;
     public Rigidbody rb;
     public GameObject win_Screen;
+    public AudioSource se;
     // Start is called before the first frame
     void Start()
     {
@@ -33,6 +34,7 @@ public class CarSpeed : MonoBehaviour
         if (other.tag == "Box")
         {
             speed -= 3;
+            se.Play();
         }
         if (other.tag == "Enemy_Car")
         {
