@@ -18,6 +18,8 @@ public class Game : MonoBehaviour
     public GameObject WinScreen;
     public GameManager gameManager;
 
+    public AudioSource CatSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,10 +28,12 @@ public class Game : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        CatSound.Play();
         if(other.gameObject.tag =="Dcat")
         {
+
             Debug.Log("you get it");
-            cats = cats + 1;
+            cats = cats + 1;        
             Destroy(other.gameObject);
             score++;
         }
